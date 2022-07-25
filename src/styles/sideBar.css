@@ -1,0 +1,9 @@
+.sideBar{
+  width: 30%;
+  min-height: 100vh;
+  background-color: #0b132b;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  
+}

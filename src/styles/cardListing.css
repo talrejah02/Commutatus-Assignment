@@ -1,0 +1,8 @@
+.cardListing{
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #141C36;
+}
