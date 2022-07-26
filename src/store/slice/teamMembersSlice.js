@@ -37,6 +37,12 @@ const createTeamMembersSlice = (set) => ({
       EmailID: "jain767@gmail.com",
     },
   ],
+  createNewMember: (payload) =>
+    set((state) => {
+      state.teamMembers.push(payload);
+      state.teams[state.currentTeam].teamMembers.push(payload.ID);
+      state.setDisplayMembers(state.teams[state.currentTeam].teamMembers);
+    }),
   setTeamMembers: (payload) =>
     set((state) => ({ ...state, teamMembers: payload })),
 });

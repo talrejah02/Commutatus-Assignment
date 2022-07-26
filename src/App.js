@@ -1,10 +1,16 @@
 import "./App.css";
-import { CardListing, CreateMemberDialog, SideBar } from "./components";
+import {
+  CardListing,
+  CreateMemberDialog,
+  SideBar,
+  CreateTeamDialog,
+} from "./components";
 import useStore from "./store/hooks/useStore";
 import { useEffect } from "react";
 
 function App() {
   const isModalOpen = useStore((state) => state.isModalOpen);
+  const isTeamModalOpen = useStore((state) => state.isTeamModalOpen);
   const teams = useStore((state) => state.teams);
   const ceoData = useStore((state) => state.ceoData);
   const departments = useStore((state) => state.departments);
@@ -29,6 +35,7 @@ function App() {
       <SideBar />
       <CardListing />
       {isModalOpen && <CreateMemberDialog />}
+      {isTeamModalOpen && <CreateTeamDialog />}
     </div>
   );
 }
